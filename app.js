@@ -70,7 +70,7 @@ app.post('/delete',async function(req,res){
   }
   else{
     List.findOneAndUpdate({name:listname},{$pull:{items:{_id:checkboxitem}}}).then(function(){
-      console.log("successfully deleteditem");
+      console.log("successfully deleted the item");
     }).catch(function(err){
       console.log(err);
     })
